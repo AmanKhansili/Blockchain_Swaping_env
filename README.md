@@ -1,5 +1,7 @@
 npx hardhat node --hostname 0.0.0.0 (run the enviroment)
 
+npx hardhat run scripts/deploy.ts --network localhost
+
 
 # Sample Hardhat 3 Project (`node:test` and `viem`)
 
