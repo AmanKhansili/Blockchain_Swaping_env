@@ -5,29 +5,16 @@ export default defineConfig({
   plugins: [hardhatToolboxViemPlugin],
   solidity: {
     profiles: {
-      default: {
-        version: "0.8.20", 
-      },
+      default: { version: "0.8.20" },
       production: {
         version: "0.8.20",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200,
-          },
-        },
+        settings: { optimizer: { enabled: true, runs: 200 } },
       },
     },
   },
   networks: {
-    hardhatMainnet: {
-      type: "edr-simulated",
-      chainType: "l1",
-    },
-    hardhatOp: {
-      type: "edr-simulated",
-      chainType: "op",
-    },
+    hardhatMainnet: { type: "edr-simulated", chainType: "l1" },
+    hardhatOp: { type: "edr-simulated", chainType: "op" },
     localhost: {
       type: "http",
       url: "http://127.0.0.1:8545",
